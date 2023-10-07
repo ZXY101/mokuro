@@ -1,4 +1,4 @@
-> This is a fork of [mokuro](https://github.com/kha-white/mokuro) that adds various improvements and featurs to the manga viewer.
+> This is fork no longer being maintained as development has moved to [mokuro-reader](https://github.com/ZXY101/mokuro-reader)
 
 # Additions:
 
