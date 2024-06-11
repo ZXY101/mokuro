@@ -395,7 +395,7 @@ class OverlayGenerator:
                     option_toggle('menuDoublePageView', 'display two pages ')
                 option_toggle('menuHasCover', 'first page is cover ')
                 if not mobile:
-                    option_toggle('menuCtrlToPan', 'ctrl+mouse to move ')
+                    option_toggle('menuCtrlToPan', 'ctrl+mouse/wheel to move or zoom')
                 option_toggle('menuDisplayOCR', 'OCR enabled ')
                 option_toggle('menuTextBoxBorders', 'display boxes outlines ')
                 option_toggle('menuEditableText', 'editable text ')

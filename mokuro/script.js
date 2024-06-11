@@ -68,7 +68,10 @@ document.addEventListener(
       },
 
       beforeWheel: function (e) {
-        let shouldIgnore = disablePanzoomOnElement(e.target);
+        let shouldIgnore =
+          disablePanzoomOnElement(e.target) ||
+          e.target.closest('.textBox') !== null ||
+          (state.ctrlToPan && !e.ctrlKey);
         return shouldIgnore;
       },
 
@@ -161,6 +164,14 @@ function updateProperties() {
     r.style.setProperty('--sentenceConnectButtonDisplay', 'none');
   }
 }
+
+document.addEventListener('wheel', (e) => {
+  if (!e.ctrlKey) {
+	e.preventDefault(); // Prevent the default scroll behavior
+	const delta = e.deltaY || e.detail || e.wheelDelta;
+	window.scrollBy(0, delta); // Scroll the page up/down
+  }
+});
 
 document.getElementById('menuCtrlToPan').addEventListener(
   'click',
